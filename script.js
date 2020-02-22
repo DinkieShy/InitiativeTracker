@@ -25,6 +25,7 @@ $(document).ready(function(){
     	if(event.target == $('#foreground')[0]){
     		console.log("from foreground");
     		removeToken(ui.item[0].id.slice(5));
+    		$('#trashBin')[0].innerHTML = "";
     	}
     	//console.log(ui.item[0].id.slice(5));
     },
@@ -33,9 +34,6 @@ $(document).ready(function(){
   });
 
   $("#trashBin").sortable({
-  	stop: function(event, ui){
-  		console.log(ui.item.id);
-  	},
   	connectWith: "#foreground",
   	scroll: false
   });

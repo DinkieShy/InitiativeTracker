@@ -20,7 +20,8 @@ body{
 	border-color: black;
 	border-radius: 10px;
 	border-width: 10px;
-	min-height: 40px
+	min-height: 40px;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
 #trashBin{
@@ -39,6 +40,10 @@ body{
 	left: 50vw;
 	bottom: 0;
 	transform: translate(-50%, 0);
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+	background-image: url("./assets/bin.png");
+	background-repeat: no-repeat;
+	background-blend-mode: overlay;
 }
 
 .token{
@@ -73,14 +78,12 @@ body{
 }
 
 button{
-	position:absolute;
-	min-width: 150px;
-	width: 20vw;
-	min-height: 100px;
-	height: 10vh;
+	margin: 2.5%;
+	width: 40%;
+	height: 7.5vh;
 	border-style: none;
 	background-color: #f7f7ff;
-	border-radius: 50px;
+	border-radius: 25px;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 	box-sizing: border-box;
 	font-size: 20px;
@@ -90,26 +93,26 @@ button:active{
 	box-shadow: inset 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
+#controls{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	box-sizing: border-box;
+	border-top-style: solid;
+	border-color: #000000;
+}
+
 #addToken{
-	bottom: 15px;
-	right: 15px;
+	float: right;
 }
 
 #sortList{
-	bottom: 15px;
-	left: 15px;
+	float: left;
 }
 
 #nextTurn{
-	margin-right: auto;
-	margin-left: auto;
-	height: 20vh;
-	min-height: 200px;
-	min-width: 150px;
-	width: 40vw;
-	bottom: 15px;
-	left: 50vw;
-	transform: translate(-50%, 0);
+	width: -webkit-fill-available;
 }
 
 #enterInitiative{
@@ -130,11 +133,11 @@ button:active{
 
 .windowButton{
 	box-shadow: none;
-	min-height: 50px;
-	height: 10%;
-	min-width: 100px;
-	width: 45%;
-	padding: 10px;
+	height: 50%;
+	width: 40%;
+	color: white;
+	margin: 0;
+	margin-top: 12.5%;
 }
 
 .windowButton:active{
@@ -144,36 +147,38 @@ button:active{
 #intInput{
 	min-height: 100px;
 	height: 30%;
-	width: 30%;
-	font-size: 75px;
+	width: 100%;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	display: block;
+	font-size: 2em;
 }
 
 #nameInput{
+	font-size: 3em;
 	min-height: 100px;
 	height: 30%;
 	width: 100%;
-	font-size: 50px;
 	resize: none;
 	box-sizing: border-box;
 	text-align: center;
 }
 
 #add{
-	background-color: green;
-	right: 15px;
-	bottom: 15px;
+	background-color: #10aa10;
+	float: right;
 }
 
 #cancel{
-	background-color: red;
-	left: 15px;
-	bottom: 15px;
+	background-color: #aa1010;
+	float: left;
+}
+
+#inputControls{
+	height: 30%;
 }
 
 .hidden{
