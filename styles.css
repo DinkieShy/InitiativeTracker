@@ -68,6 +68,9 @@ body{
 
 .tokenName{
 	float: left;
+	width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .tokenInitiative{
@@ -134,11 +137,10 @@ button:active{
 
 .windowButton{
 	box-shadow: none;
-	height: 50%;
+	height: 90%;
 	width: 40%;
 	color: white;
 	margin: 0;
-	margin-top: 12.5%;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
@@ -181,6 +183,8 @@ button:active{
 
 #inputControls{
 	height: 30%;
+	box-sizing: border-box;
+	margin-top: 15px;
 }
 
 .hidden{
