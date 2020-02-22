@@ -10,10 +10,10 @@ function Token(name, initiative){
 }
 
 $(document).ready(function(){
+
 	console.log("init");
 
 	$("#addToken").click(showInput);
-	
 
 	$("#foreground").sortable({
 		start: function(event, ui){
@@ -35,7 +35,9 @@ function showInput(){
 
 function hideInput(){
 	$('#enterInitiative').addClass("hidden");
-	$('#greyOut').addClass("hidden");	
+	$("#intInput").val("");	
+	$('#greyOut').addClass("hidden");
+	$("#nameInput").val("");
 }
 
 function addNewToken(name, initiative){
@@ -48,11 +50,9 @@ function addNewToken(name, initiative){
 function addToken(){
 	console.log("click");
 	if($("#intInput").val() != "" && $("#nameInput").val() != ""){
-		hideInput();
 		initiative = $("#intInput").val();
-		$("#intInput").val("");
 		name = $("#nameInput").val();
-		$("#nameInput").val("");
 		addNewToken(name, initiative);
+		hideInput();
 	}
 }

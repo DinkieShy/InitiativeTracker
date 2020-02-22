@@ -1,6 +1,7 @@
 html{
 	padding: 0;
 	margin: 0;
+	font-family: sans-serif;
 }
 
 body{
@@ -53,14 +54,15 @@ body{
 
 button{
 	position:absolute;
-	width: 150px;
-	height: 100px;
+	min-width: 150px;
+	width: 20vw;
+	min-height: 100px;
+	height: 10vh;
 	border-style: none;
 	background-color: #f7f7ff;
 	border-radius: 50px;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 	font-size: 20px;
-	font-family: sans-serif;
 }
 
 button:active{
@@ -81,7 +83,8 @@ button:active{
 	position: absolute;
 	vertical-align: middle;
 	width: 95vw;
-	height: 300px;
+	min-height: 300px;
+	height: 66vh;
 	background-color: #e7e7f7;
 	top: 50vh;
 	left: 50vw;
@@ -89,12 +92,15 @@ button:active{
 	z-index: 2;
 	border-radius: 10px;
 	padding: 15px;
+	box-sizing: border-box;
 }
 
 .windowButton{
 	box-shadow: none;
-	height: auto;
-	width: 100px;
+	min-height: 50px;
+	height: 10%;
+	min-width: 100px;
+	width: 45%;
 	padding: 10px;
 }
 
@@ -103,23 +109,25 @@ button:active{
 }
 
 #intInput{
-	float: right;
-	height: 100px;
-	width: 25%;
+	min-height: 100px;
+	height: 30%;
+	width: 30%;
 	font-size: 75px;
-	margin-top: 150px;
-	transform: translate(0, -50%);
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+	display: block;
 }
 
 #nameInput{
-	float: left;
-	height: 100px;
-	width: 60%;
-	font-size: 37.5px;
-	margin-top: 150px;
-	transform: translate(0, -50%);
+	min-height: 100px;
+	height: 30%;
+	width: 100%;
+	font-size: 50px;
 	resize: none;
+	box-sizing: border-box;
 	text-align: center;
 }
 
