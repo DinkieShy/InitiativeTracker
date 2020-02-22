@@ -197,3 +197,46 @@ button:active{
 	background-color: #121222;
 	opacity: 0.5;
 }
+
+@media only screen and (min-width: 600px){
+	body{
+		background-color: #505060;
+		margin: 2.5vw;
+		margin-bottom: 0;
+		margin-top: 2.5vh;
+		padding: 0;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	button{
+		height: 7.5vh;
+		width: 20%;
+	}	
+
+	#sortList{
+		float: none;
+	}
+
+	#addToken{
+		float: none;
+	}
+
+	#nextTurn{
+		width: 50%;
+	}
+
+	#controls{
+		position: absolute;
+		bottom: 2.5vw;
+		width: 95vw;
+		height: 10%;
+		display: inline-flex;
+	}
+
+	#foreground{
+		height: 85%;
+		display: block;
+		position: absolute;
+	}
+}

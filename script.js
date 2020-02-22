@@ -40,8 +40,6 @@ $(document).ready(function(){
   $("#cancel").click(hideInput);
   $("#sortList").click(sortList);
   $("#nextTurn").click(shuffleList);
-
-	console.log("init done");
 });
 
 function showBin(){
@@ -64,7 +62,6 @@ function removeToken(id){
 }
 
 function showInput(){
-	console.log("click");
 	$('#enterInitiative').removeClass("hidden");
 	$('#greyOut').removeClass("hidden");
 }
@@ -106,7 +103,6 @@ function hideInput(){
 }
 
 function addNewToken(name, initiative){
-	console.log("Adding new");
 	newToken = new Token(name, initiative);
 	tokens.push(newToken);
 	classes = "token"
@@ -115,11 +111,10 @@ function addNewToken(name, initiative){
 }
 
 function addToken(){
-	console.log("click");
 	if($("#intInput").val() != "" && $("#nameInput").val() != ""){
 		initiative = $("#intInput").val();
 		name = $("#nameInput").val();
-		addNewToken(name, initiative);
+		addNewToken(name, parseInt(initiative));
 		hideInput();
 	}
 }
