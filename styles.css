@@ -8,6 +8,7 @@ body{
 	background-color: #505060;
 	margin: 0;
 	padding: 2.5vw;
+	overflow: hidden;
 }
 
 #foreground{
@@ -22,6 +23,24 @@ body{
 	min-height: 40px
 }
 
+#trashBin{
+	background-color: #ee4040;
+	border-color: #ff0000;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-style: solid;
+	border-bottom-style: none;
+	border-width: 2px;
+	box-sizing: border-box;
+	position: absolute;
+	height: 25vh;
+	width: 90vw;
+	left: 50vw;
+	bottom: 0;
+	transform: translate(-50%, 0);
+}
+
 .token{
 	border-color: #707090;
 	border-width: 2px;
@@ -32,6 +51,7 @@ body{
 	background-color: #f7f7ff;
 	margin: 20px;
 	height: 64px;
+	max-height: 10vh;
 }
 
 .token label{
@@ -62,6 +82,7 @@ button{
 	background-color: #f7f7ff;
 	border-radius: 50px;
 	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+	box-sizing: border-box;
 	font-size: 20px;
 }
 
@@ -74,9 +95,21 @@ button:active{
 	right: 15px;
 }
 
-#nextTurn{
+#sortList{
 	bottom: 15px;
 	left: 15px;
+}
+
+#nextTurn{
+	margin-right: auto;
+	margin-left: auto;
+	height: 20vh;
+	min-height: 200px;
+	min-width: 150px;
+	width: 40vw;
+	bottom: 15px;
+	left: 50vw;
+	transform: translate(-50%, 0);
 }
 
 #enterInitiative{
