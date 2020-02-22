@@ -56,8 +56,8 @@ body{
 	box-sizing: border-box;
 	background-color: #f7f7ff;
 	margin: 20px;
-	height: 64px;
-	max-height: 10vh;
+	min-height: 64px;
+	overflow-y: hidden;
 }
 
 .token label{
@@ -69,8 +69,9 @@ body{
 .tokenName{
 	float: left;
 	width: 75%;
-  white-space: nowrap;
   overflow: hidden;
+  min-height: 40px;
+  overflow-wrap: break-word;
 }
 
 .tokenInitiative{
