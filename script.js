@@ -89,7 +89,12 @@ function shuffleList(){
 function redrawList(){
 	$("#foreground")[0].innerHTML = "";
 	for(var i = 0; i < tokens.length; i++){
-		$("#foreground")[0].innerHTML += `<div id=token${tokens[i].id} class="token"><label class="tokenName">${tokens[i].name}</label><label class="tokenInitiative">${tokens[i].initiative}</label></div>`;
+		if(i == 0){
+			$("#foreground")[0].innerHTML += `<div id=token${tokens[i].id} class="token activeToken"><label class="tokenName">${tokens[i].name}</label><label class="tokenInitiative">${tokens[i].initiative}</label></div>`;
+		}
+		else{
+			$("#foreground")[0].innerHTML += `<div id=token${tokens[i].id} class="token"><label class="tokenName">${tokens[i].name}</label><label class="tokenInitiative">${tokens[i].initiative}</label></div>`;
+		}
 	}
 }
 
@@ -104,7 +109,9 @@ function addNewToken(name, initiative){
 	console.log("Adding new");
 	newToken = new Token(name, initiative);
 	tokens.push(newToken);
-	$("#foreground")[0].innerHTML += `<div id=token${newToken.id} class="token"><label class="tokenName">${name}</label><label class="tokenInitiative">${initiative}</label></div>`;
+	classes = "token"
+	if(tokens.length == 1) classes += " activeToken";
+	$("#foreground")[0].innerHTML += `<div id=token${newToken.id} class="${classes}"><label class="tokenName">${name}</label><label class="tokenInitiative">${initiative}</label></div>`;
 }
 
 function addToken(){
