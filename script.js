@@ -22,12 +22,10 @@ $(document).ready(function(){
     },
     stop: function(event, ui){
     	hideBin();
-    	if(event.target == $('#foreground')[0]){
-    		console.log("from foreground");
-    		removeToken(ui.item[0].id.slice(5));
-    		$('#trashBin')[0].innerHTML = "";
-    	}
     	//console.log(ui.item[0].id.slice(5));
+    	if($(`#${ui.item[0].id}`)[0].parentElement.id == "trashBin"){
+    		removeToken(ui.item[0].id.slice(5));
+    	}
     },
   	connectWith: "#trashBin",
   	scroll: false
@@ -48,6 +46,7 @@ $(document).ready(function(){
 
 function showBin(){
 	$("#trashBin").removeClass("hidden");
+  $('#trashBin').sortable("refresh");
 }
 
 function hideBin(){
