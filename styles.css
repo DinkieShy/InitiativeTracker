@@ -1,0 +1,151 @@
+html{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #505060;
+	margin: 0;
+	padding: 2.5vw;
+}
+
+#foreground{
+	background-color: #e7e7f7;
+	width: 95vw;
+	box-sizing: border-box;
+	height: auto;
+	border-style: double;
+	border-color: black;
+	border-radius: 10px;
+	border-width: 10px;
+	min-height: 40px
+}
+
+.token{
+	border-color: #707090;
+	border-width: 2px;
+	border-radius: 10px;
+	border-style: solid;
+	padding: 0.5em;
+	box-sizing: border-box;
+	background-color: #f7f7ff;
+	margin: 20px;
+	height: 64px;
+}
+
+.token label{
+	display: inline-block;
+	user-select: none;
+	font-size: 35px;
+}
+
+.tokenName{
+	float: left;
+}
+
+.tokenInitiative{
+	float: right;
+}
+
+#defaultToken{
+	display: none;
+}
+
+button{
+	position:absolute;
+	width: 150px;
+	height: 100px;
+	border-style: none;
+	background-color: #f7f7ff;
+	border-radius: 50px;
+	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+button:active{
+	box-shadow: inset 10px 10px 10px 0px rgba(0,0,0,0.5);
+}
+
+#addToken{
+	bottom: 15px;
+	right: 15px;
+}
+
+#nextTurn{
+	bottom: 15px;
+	left: 15px;
+}
+
+#enterInitiative{
+	position: absolute;
+	vertical-align: middle;
+	width: 95vw;
+	height: 300px;
+	background-color: #e7e7f7;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.windowButton{
+	box-shadow: none;
+	height: auto;
+	width: 100px;
+	padding: 10px;
+}
+
+.windowButton:active{
+	box-shadow: none;
+}
+
+#intInput{
+	float: right;
+	height: 100px;
+	width: 25%;
+	font-size: 75px;
+	margin-top: 150px;
+	transform: translate(0, -50%);
+	text-align: center;
+}
+
+#nameInput{
+	float: left;
+	height: 100px;
+	width: 60%;
+	font-size: 37.5px;
+	margin-top: 150px;
+	transform: translate(0, -50%);
+	resize: none;
+	text-align: center;
+}
+
+#add{
+	background-color: green;
+	right: 15px;
+	bottom: 15px;
+}
+
+#cancel{
+	background-color: red;
+	left: 15px;
+	bottom: 15px;
+}
+
+.hidden{
+	display: none !important;
+}
+
+#greyOut{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	background-color: #121222;
+	opacity: 0.5;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Initiative Tracker</title>
+	  <link rel="stylesheet" href="./styles.css" type="text/css">
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+	  <script type="text/javascript" src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+	  <script type="text/javascript" src="./jQueryUITouchPunch.js"></script>
+	</head>	
+	<body>
+		<div id="foreground">
+		</div>
+
+		<button id="addToken">Add Token</button>
+		<button id="nextTurn">Next Turn</button>
+
+		<div id="defaultToken">
+			<div class="token">
+				<label class="tokenName">Default</label>
+				<label class="tokenInitiative">10</label>
+			</div>
+		</div>
+
+		<div id="greyOut" class="hidden"></div>
+
+		<div id="enterInitiative" class="hidden">
+			<textarea id="nameInput"></textarea>
+			<input type="number" id="intInput">
+			<button id="add" class="windowButton">Add</button>
+			<button id="cancel" class="windowButton">Cancel</button>
+		</div>
+	</body>
+</html>
