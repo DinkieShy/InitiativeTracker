@@ -2,8 +2,8 @@ tokenID = 0;
 tokens = [];
 
 function Token(name, initiative){
-	this.initiative = initiative || 10;
-	this.name = name || "Default";
+	this.initiative = initiative;
+	this.name = name;
 	this.id = tokenID;
 	tokenID += 1;
 	return this;
@@ -18,11 +18,11 @@ $(document).ready(function(){
 	$("#foreground").sortable({
 		start: function(event, ui){
     	ui.helper.height("64px");
+    	ui.helper.zIndex("4");
     	showBin();
     },
     stop: function(event, ui){
     	hideBin();
-    	//console.log(ui.item[0].id.slice(5));
     	if($(`#${ui.item[0].id}`)[0].parentElement.id == "trashBin"){
     		removeToken(ui.item[0].id.slice(5));
     	}
@@ -58,6 +58,7 @@ function removeToken(id){
 			break;
 		}
 	}
+	$('#trashBin')[0].innerHTML = "";
 	redrawList();
 }
 
@@ -68,12 +69,7 @@ function showInput(){
 
 function sortList(){
 	tokens.sort(function(a, b){
-		if(a.initiative < b.initiative){
-			return 1;
-		}
-		else{
-			return -1;
-		}
+		return b.initiative - a.initiative
 	});
 	redrawList();
 }
@@ -114,7 +110,7 @@ function addToken(){
 	if($("#intInput").val() != "" && $("#nameInput").val() != ""){
 		initiative = $("#intInput").val();
 		name = $("#nameInput").val();
-		addNewToken(name, parseInt(initiative));
+		addNewToken(name, parseInt(initiative, 10));
 		hideInput();
 	}
 }
